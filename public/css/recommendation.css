@@ -1,0 +1,283 @@
+.recommendation
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	color: var(--clrBlack);
+	cursor: default;
+	display: none;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.recommendation.active
+{
+	display: flex;
+}
+
+.recommendation h2
+{
+	color: var(--clrBase);
+	font-weight: 600;
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.recommendation h3
+{
+	color: var(--clrBlack);
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.recommendation p:last-child
+{
+	color: var(--clrGrey);
+	margin-top: 20px;
+}
+
+.recommendation .contents
+{
+	display: flex;
+	flex-direction: column;
+	margin: 140px 200px 140px 200px;
+	text-align: center;
+	width: 100%;
+}
+
+.recommendation .contents .choose-animal img
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	border-radius: 10px;
+	cursor: pointer;
+	height: 100px;
+	margin-right: 30px;
+	padding: 20px;
+	transition: background-color .3s;
+	width: 100px;
+}
+
+.recommendation .contents .choose-animal img:last-child
+{
+	margin-right: 0;
+}
+
+.recommendation .contents .choose-animal img:hover, .recommendation .contents .choose-animal img.active
+{
+	background-color: var(--clrGrey);
+}
+
+.recommendation .contents .input-area
+{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.recommendation .contents .input-area .col:first-child
+{
+	margin-right: 30px;
+}
+
+.recommendation .contents .input-area input
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	border: 0;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	transition: all .3s;
+	width: 60%;
+}
+
+.recommendation .contents .input-area input::-webkit-inner-spin-button, .recommendation .contents .input-area input::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+}
+
+.recommendation .contents .input-area input:hover
+{
+	background-color: rgba(var(--clrGreyRGB), .7);
+}
+
+.recommendation .contents .recommendation-start-calculation
+{
+	background: linear-gradient(to right, var(--clrBase) 50%, var(--clrBlack) 50%);
+	background-position: left bottom;
+	background-size: 200% 100%;
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	color: var(--clrWhite);
+	font-size: 1.2rem;
+	margin-top: 20px;
+	padding: 20px;
+	transition: background-position .5s;
+	width: 100%;
+}
+
+.recommendation .contents .recommendation-start-calculation:hover
+{
+	background-position: right bottom;
+}
+
+.recommendation.result
+{
+	display: none;
+}
+
+.recommendation.result.active
+{
+	display: flex;
+}
+
+.recommendation.result .contents
+{
+	margin-bottom: 0;
+}
+
+.recommendation.result .contents .choose-animal img:hover
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	cursor: default;
+}
+
+.recommendation.result .contents .output
+{
+	margin-top: 30px;
+	text-align: left;
+}
+
+.recommendation.result .contents .output p
+{
+	margin: 0;
+}
+
+.recommendation.result .contents .output p:last-child
+{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.recommendation.result .contents .output .row
+{
+	border-bottom: 1px solid var(--clrBlack);
+	margin-top: 30px;
+}
+
+.recommendation.result .contents .cost
+{
+	margin-top: 60px;
+	text-align: right;
+}
+
+.recommendation.result .contents .cost p:first-child
+{
+	font-weight: 600;
+}
+
+.recommendation.result .contents .cost p:last-child
+{
+	color: var(--clrBlack);
+}
+
+.recommendation.result .footer-recommendation
+{
+	font-weight: 300;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 952px)
+{
+	.recommendation .contents
+	{
+		margin: 130px 100px 130px 100px;
+	}
+}
+
+@media (max-width: 426px)
+{
+	.recommendation h2
+	{
+		font-size: 1.8em;
+		margin-bottom: 10px;
+	}
+
+	.recommendation h3
+	{
+		font-size: .9em;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.recommendation p
+	{
+		font-size: .8em;
+	}
+
+	.recommendation .contents
+	{
+		margin: 140px 25px 140px 25px;
+	}
+
+	.recommendation .contents .choose-animal img
+	{
+		border-radius: 7px;
+		height: 50px;
+		margin-right: 15px;
+		padding: 8px;
+		width: 50px;
+	}
+
+	.recommendation .contents .input-area
+	{
+		margin-top: 7px;
+	}
+
+	.recommendation .contents .input-area .col:first-child
+	{
+		margin-right: 30px;
+	}
+
+	.recommendation .contents .input-area p
+	{
+		font-size: .7em;
+	}
+
+	.recommendation .contents .input-area input
+	{
+		border: 0;
+		border-radius: 7px;
+		font-size: .8em;
+		padding: 7px;
+	}
+
+	.recommendation .contents .recommendation-start-calculation
+	{
+		font-size: .9em;
+		padding: 15px;
+	}
+	
+	.recommendation.result .contents .output
+	{
+		margin-top: 25px;
+	}
+	
+	.recommendation.result .contents .cost p:first-child
+	{
+		font-weight: 600;
+	}
+	
+	.recommendation.result .contents .cost p:last-child
+	{
+		margin-top: 10px;
+	}
+	
+	.recommendation.result .footer-recommendation
+	{
+		font-size: .8em;
+	}
+}

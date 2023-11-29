@@ -1,0 +1,283 @@
+.manual
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	color: var(--clrBlack);
+	cursor: default;
+	display: none;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.manual.active
+{
+	display: flex;
+}
+
+.manual h2
+{
+	color: var(--clrBase);
+	font-weight: 600;
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.manual h3
+{
+	color: var(--clrBlack);
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.manual p:last-child
+{
+	color: var(--clrGrey);
+	margin-top: 20px;
+}
+
+.manual .contents
+{
+	display: flex;
+	flex-direction: column;
+	margin: 140px 200px 140px 200px;
+	text-align: center;
+	width: 100%;
+}
+
+.manual .contents .choose-animal img
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	border-radius: 10px;
+	cursor: pointer;
+	height: 100px;
+	margin-right: 30px;
+	padding: 20px;
+	transition: background-color .3s;
+	width: 100px;
+}
+
+.manual .contents .choose-animal img:last-child
+{
+	margin-right: 0;
+}
+
+.manual .contents .choose-animal img:hover, .manual .contents .choose-animal img.active
+{
+	background-color: var(--clrGrey);
+}
+
+.manual .contents .input-area
+{
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.manual .contents .input-area .col:first-child
+{
+	margin-right: 30px;
+}
+
+.manual .contents .input-area input
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	border: 0;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	transition: all .3s;
+	width: 60%;
+}
+
+.manual .contents .input-area input::-webkit-inner-spin-button, .manual .contents .input-area input::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+}
+
+.manual .contents .input-area input:hover
+{
+	background-color: rgba(var(--clrGreyRGB), .7);
+}
+
+.manual .contents .manual-start-calculation
+{
+	background: linear-gradient(to right, var(--clrBase) 50%, var(--clrBlack) 50%);
+	background-position: left bottom;
+	background-size: 200% 100%;
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	color: var(--clrWhite);
+	font-size: 1.2rem;
+	margin-top: 30px;
+	padding: 20px;
+	transition: background-position .5s;
+	width: 100%;
+}
+
+.manual .contents .manual-start-calculation:hover
+{
+	background-position: right bottom;
+}
+
+.manual.result
+{
+	display: none;
+}
+
+.manual.result.active
+{
+	display: flex;
+}
+
+.manual.result .contents
+{
+	margin-bottom: 0;
+}
+
+.manual.result .contents .choose-animal img:hover
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	cursor: default;
+}
+
+.manual.result .contents .output
+{
+	margin-top: 30px;
+	text-align: left;
+}
+
+.manual.result .contents .output p
+{
+	margin: 0;
+}
+
+.manual.result .contents .output p:last-child
+{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.manual.result .contents .output .row
+{
+	border-bottom: 1px solid var(--clrBlack);
+	margin-top: 30px;
+}
+
+.manual.result .contents .cost
+{
+	margin-top: 60px;
+	text-align: right;
+}
+
+.manual.result .contents .cost p:first-child
+{
+	font-weight: 600;
+}
+
+.manual.result .contents .cost p:last-child
+{
+	color: var(--clrBlack);
+}
+
+.manual.result .footer-manual
+{
+	font-weight: 300;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 952px)
+{
+	.manual .contents
+	{
+		margin: 130px 100px 130px 100px;
+	}
+}
+
+@media (max-width: 426px)
+{
+	.manual h2
+	{
+		font-size: 1.8em;
+		margin-bottom: 10px;
+	}
+
+	.manual h3
+	{
+		font-size: .9em;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.manual p
+	{
+		font-size: .8em;
+	}
+
+	.manual .contents
+	{
+		margin: 140px 25px 140px 25px;
+	}
+
+	.manual .contents .choose-animal img
+	{
+		border-radius: 7px;
+		height: 50px;
+		margin-right: 15px;
+		padding: 8px;
+		width: 50px;
+	}
+
+	.manual .contents .input-area
+	{
+		margin-top: 7px;
+	}
+
+	.manual .contents .input-area .col:first-child
+	{
+		margin-right: 30px;
+	}
+
+	.manual .contents .input-area p
+	{
+		font-size: .7em;
+	}
+
+	.manual .contents .input-area input
+	{
+		border: 0;
+		border-radius: 7px;
+		font-size: .8em;
+		padding: 7px;
+	}
+
+	.manual .contents .manual-start-calculation
+	{
+		font-size: .9em;
+		padding: 15px;
+	}
+	
+	.manual.result .contents .output
+	{
+		margin-top: 25px;
+	}
+	
+	.manual.result .contents .cost p:first-child
+	{
+		font-weight: 600;
+	}
+	
+	.manual.result .contents .cost p:last-child
+	{
+		margin-top: 10px;
+	}
+	
+	.manual.result .footer-manual
+	{
+		font-size: .8em;
+	}
+}

@@ -1,0 +1,199 @@
+.profile-background
+{
+	background: radial-gradient(circle, var(--clrBase2), var(--clrBase), var(--clrBase3));
+}
+
+.profile
+{
+	padding: 200px 200px;
+	margin-top: -200px;
+}
+
+.profile .container h3
+{
+	color: var(--clrWhite);
+	font-size: 2rem;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.profile .container .button-action
+{
+	float: right;
+	margin: 25px 15px 30px 0;
+	margin-right: 15px;
+}
+
+.profile .container .button-action button
+{
+	font-size: 1rem;
+	color: var(--clrWhite);
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid var(--clrDarkGrey);
+	border-radius: 5px;
+	padding: 5px 10px;
+	transition: all .3s;
+}
+
+.profile .container .button-action .save
+{
+	background: var(--clrBase2);
+	border: 1px solid var(--clrBase2);
+}
+
+.profile .container .button-action .save:hover
+{
+	background: var(--clrGreen);
+	border: 1px solid var(--clrGreen);
+}
+
+.profile .container .button-action .cancel:hover
+{
+	background: var(--clrRed);
+	border: 1px solid var(--clrRed);
+}
+
+.profile-box
+{
+	width: 1050px;
+	min-height: 300px;
+	position: relative;
+	background: var(--clrWhite);
+	border-radius: 10px;
+	box-shadow: 1px 4px 22px -8px var(--clrBlack);
+	display: flex;
+}
+
+.profile-box .left
+{
+	width: 30%;
+	height: 100%;
+}
+
+.profile-box .left .container
+{
+	display: block;
+	margin: auto;
+}
+
+.profile-box .left a
+{
+	display: block;
+	font-weight: 600;
+	color: var(--clrGrey);
+	cursor: pointer;
+	background: transparent;
+	padding: 15px 0 15px 20px;
+	margin: auto;
+	transition: background-position .3s;
+}
+
+.profile-box .left .general
+{
+	border-top-left-radius: 10px;
+}
+
+.profile-box .left a:hover
+{
+	background: rgba(var(--clrDarkWhiteRGB), .3);
+}
+
+.profile-box .left a.active
+{
+	font-weight: 700;
+	background: rgba(var(--clrDarkWhiteRGB), .3);
+}
+
+.profile-box .right
+{
+	width: 100%;
+	height: 100%;
+	color: var(--clrDarkGrey);
+	position: relative;
+}
+
+.profile-box .right .user-data
+{
+	display: block;
+	margin: 25px 0 0 10px;
+}
+
+.profile-box .right .user-data .avatar
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.profile-box .right .user-data .avatar img
+{
+	width: 100px;
+}
+
+.profile-box .right .user-data .avatar a
+{
+	color: var(--clrDarkGrey);
+	cursor: pointer;
+	background: transparent;
+	margin-left: 35px;
+	border: 1px solid var(--clrDarkGrey);
+	border-radius: 5px;
+	padding: 5px 10px;
+	transition: all .3s;
+}
+
+.profile-box .right .user-data .avatar a:hover
+{
+	color: var(--clrWhite);
+	background: var(--clrBase3);
+	border: 1px solid var(--clrBase3);
+}
+
+.profile-box .right .user-data .group
+{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.profile-box .right .user-data input, .profile-box .right .user-data textarea
+{
+	width: 98%;
+	padding: 5px;
+	border: 1px solid rgba(var(--clrDarkGreyRGB), .5);
+	border-radius: 5px;
+	outline: none;
+	transition: border .3s;
+	margin-top: 4px;
+}
+
+.profile-box .right .user-data input:focus, .profile-box .right .user-data textarea:focus
+{
+	border: 1px solid var(--clrBase3);
+	border-color: var(--clrBase);
+	box-shadow: 0 0 9px rgba(var(--clrBaseRGB), .5);
+	animation: glowInput 1s infinite alternate;
+}
+
+.profile-box .right .user-data textarea
+{
+	resize: vertical;
+	min-height: 50px;
+	max-height: 350px;
+}
+
+@keyframes glowInput
+{
+	from
+	{
+		box-shadow: 0 0 9px rgba(var(--clrBaseRGB), .5);
+	}
+
+	to
+	{
+		box-shadow: 0 0 20px rgba(var(--clrBaseRGB), .5);
+	}
+}

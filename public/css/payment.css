@@ -1,0 +1,444 @@
+.payment
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	color: var(--clrBlack);
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.payment .contents
+{
+	display: block;
+	height: 100%;
+	margin: 100px 0 100px 0;
+	text-align: center;
+	width: 80%;
+}
+
+.payment .contents .card
+{
+	align-items: center;
+	background-color: var(--clrGrey2);
+	box-shadow: 0 2px 2px var(--clrBlack);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	height: 450px;
+	justify-content: space-between;
+	margin-top: 25px;
+	padding: 60px;
+	text-align: left;
+	width: 100%;
+}
+
+.payment .contents .bank
+{
+	align-items: center;
+	display: flex;
+	gap: 50px;
+	margin-top: 20px;
+}
+
+.payment .contents .bank p
+{
+	font-weight: 600;
+}
+
+.payment .contents .bank img
+{
+	width: 25%;
+}
+
+.payment .contents .bank-info
+{
+	border-bottom: 2px solid var(--clrGrey);
+	margin-top: 20px;
+}
+
+.payment .contents .bank-info p
+{
+	color: var(--clrGrey);
+	margin-bottom: 5px;
+}
+
+.payment .contents .bank-info p.bank-number
+{
+	color: var(--clrBlack);
+}
+
+.payment .contents .bank-info p i
+{
+	cursor: pointer;
+	font-weight: 100;
+	margin-left: 90px;
+	transition: all .3s;
+}
+
+.payment .contents .bank-info p i:hover
+{
+	color: var(--clrBase);
+	font-weight: 1000;
+	transform: scale(1.2);
+}
+
+.payment .contents .timer
+{
+	color: var(--clrGrey);
+	margin-top: 50px;
+}
+
+.payment .contents .timer p
+{
+	white-space: pre;
+}
+
+.payment .contents .timer span
+{
+	color: var(--clrRed);
+	font-size: 1.5em;
+}
+
+.payment .contents .timer span#hours, .payment .contents .timer span#minutes
+{
+	margin-right: 20px;
+}
+
+.payment .contents .timer span#minutes, .payment .contents .timer span#seconds
+{
+	margin-left: 20px;
+}
+
+.payment .contents .card.info
+{
+	align-items: self-start;
+	background-color: var(--clrGrey2);
+	border-radius: 5px;
+	box-shadow: 0 2px 3px var(--clrBlack);
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	margin-top: 0;
+	padding: 20px;
+	width: 400px;
+}
+
+.payment .contents .card.info p
+{
+	font-weight: 600;
+}
+
+.payment .contents .card.info .subinfo
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.payment .contents .card.info .subinfo.sum
+{
+	border-top: 2px solid rgba(var(--clrBlackRGB), .4);
+	margin-top: 15px;
+	padding-top: 10px;
+}
+
+.payment .contents .finish-payment-button
+{
+	background: linear-gradient(to right, var(--clrBase) 50%, var(--clrBlack) 50%);
+	background-position: left bottom;
+	background-size: 200% 100%;
+	border: 0;
+	border-radius: 5px;
+	color: var(--clrWhite);
+	cursor: pointer;
+	display: flex;
+	font-size: 1em;
+	font-weight: 600;
+	justify-content: center;
+	margin-top: 25px;
+	padding: 10px;
+	text-align: center;
+	transition: background-position .5s;
+	width: 100%;
+}
+
+.payment .contents .finish-payment-button:hover
+{
+	background-position: right bottom;
+}
+
+.payment-success
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	cursor: default;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	overflow: hidden;
+	width: 100%;
+}
+
+.payment-success img
+{
+	width: 30%;
+}
+
+.payment-success h1
+{
+	font-size: 2vw;
+	font-weight: 2vw;
+}
+
+.payment-success .contents
+{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}
+
+@media (max-width: 1160px)
+{
+	.payment h1
+	{
+		font-weight: 600;
+	}
+
+	.payment h3
+	{
+		font-weight: 600;
+	}
+
+	.payment .contents
+	{
+		width: 90%;
+	}
+
+	.payment .contents .card
+	{
+		padding: 50px;
+	}
+
+	.payment .contents .bank
+	{
+		gap: 40px;
+		margin-top: 15px;
+	}
+
+	.payment .contents .bank-info
+	{
+		margin-top: 15px;
+	}
+
+	.payment .contents .timer
+	{
+		margin-top: 40px;
+	}
+
+	.payment .contents .card.info
+	{
+		width: 300px;
+	}
+
+	.payment .contents .card.info p
+	{
+		font-size: .8em;
+		font-weight: 550;
+	}
+
+	.payment .contents .card.info .subinfo
+	{
+		margin-bottom: 1px;
+	}
+
+	.payment .contents .card.info .subinfo.sum
+	{
+		margin-top: 1px;
+		padding-top: 5px;
+	}
+
+	.payment .contents .finish-payment-button
+	{
+		font-size: .9em;
+		font-weight: 550;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 875px)
+{
+	.payment h3
+	{
+		font-weight: 500;
+	}
+
+	.payment .contents
+	{
+		width: 80%;
+	}
+
+	.payment .contents .card
+	{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		padding: 50px;
+	}
+
+	.payment .contents .bank
+	{
+		gap: 20px;
+		margin-top: 15px;
+	}
+
+	.payment .contents .bank-info
+	{
+		margin-top: 10px;
+	}
+
+	.payment .contents .timer
+	{
+		margin-top: 25px;
+	}
+
+	.payment .contents .card.info
+	{
+		margin-top: 30px;
+		width: 40vw;
+	}
+
+	.payment .contents .card.info p
+	{
+		font-size: .8em;
+		font-weight: 550;
+	}
+
+	.payment .contents .card.info .subinfo
+	{
+		margin-bottom: 1px;
+	}
+
+	.payment .contents .card.info .subinfo.sum
+	{
+		margin-top: 1px;
+		padding-top: 5px;
+	}
+
+	.payment .contents .finish-payment-button
+	{
+		font-size: .9em;
+		font-weight: 550;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 560px)
+{
+	.payment h3
+	{
+		font-size: 1em;
+	}
+
+	.payment .contents
+	{
+		width: 90%;
+	}
+
+	.payment .contents .card
+	{
+		padding: 50px;
+	}
+
+	.payment .contents .bank
+	{
+		gap: 10px;
+		margin-top: 10px;
+	}
+
+	.payment .contents .bank p
+	{
+		font-size: .9em;
+	}
+
+	.payment .contents .bank img
+	{
+		width: 20%;
+	}
+
+	.payment .contents .bank-info p
+	{
+		font-size: .9em;
+	}
+
+	.payment .contents .timer
+	{
+		font-size: .9em;
+		margin-top: 20px;
+	}
+
+	.payment .contents .timer span
+	{
+		font-size: 1.2em;
+	}
+
+	.payment .contents .card.info
+	{
+		margin-top: 30px;
+		width: 55vw;
+	}
+
+	.payment .contents .card.info p
+	{
+		font-size: .7em;
+		font-weight: 500;
+	}
+
+	.payment .contents .finish-payment-button
+	{
+		font-weight: 500;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 400px)
+{
+	.payment h3
+	{
+		font-size: .9em;
+	}
+
+	.payment .contents .card
+	{
+		padding: 50px;
+	}
+
+	.payment .contents .bank img
+	{
+		width: 20%;
+	}
+
+	.payment .contents .bank-info p
+	{
+		font-size: .9em;
+	}
+
+	.payment .contents .timer
+	{
+		font-size: .8em;
+		margin-top: 15px;
+	}
+
+	.payment .contents .card.info
+	{
+		margin-top: 25px;
+	}
+}

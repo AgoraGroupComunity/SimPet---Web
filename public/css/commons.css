@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*
+{
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	scroll-behavior: smooth;
+	scroll-padding-top: 1em;
+	text-decoration: none;
+}
+
+:root
+{
+	/* Colors */
+	--clrBase: #8d7b68;
+	--clrBase2: #a3a09c;
+	--clrBase3: #766654;
+	--clrBaseRGB: 141, 123, 104;
+	--clrBase2RGB: 163, 160, 156;
+	--clrBase3RGB: 118, 102, 84;
+	--clrBlack: #000000;
+	--clrBlackRGB: 0, 0, 0;
+	--clrBrown: #734d07;
+	--clrDarkGrey: #1b1b1b;
+	--clrDarkWhite: #b7b5b5;
+	--clrDarkGreyRGB: 27, 27, 27;
+	--clrDarkWhiteRGB: 183, 181, 181;
+	--clrGrey: #808080;
+	--clrGrey2: #f0f0f0;
+	--clrGreyRGB: 128, 128, 128;
+	--clrGreen: #008000;
+	--clrPurple: #531a89;
+	--clrPurple2: #bf61ff;
+	--clrRed: #ff0000;
+	--clrWhite: #ffffff;
+	--clrWhiteRGB: 255, 255, 255;
+
+	/* Indexes */
+	--idxNavigationBar: 10000;
+}
+
+::-webkit-scrollbar
+{
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb:vertical
+{
+	border: 1px solid var(--clrBlack);
+	background: var(--clrBase);
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: var(--clrBlack);
+}
+
+.not-available
+{
+	color: var(--clrDarkGrey);
+}
+
+.italic
+{
+	font-style: italic;
+}
+
+.back-button
+{
+	background: linear-gradient(to left, var(--clrWhite) 50%, var(--clrBase) 50%);
+	background-position: right bottom;
+	background-size: 200% 100%;
+	border: 2px solid var(--clrBlack);
+	bottom: 20px;
+	color: var(--clrBlack);
+	cursor: pointer;
+	display: block;
+	font-size: 1.2em;
+	font-weight: 600;
+	left: 20px;
+	padding: 10px 20px;
+	position: fixed;
+	transition: background-position .5s;
+	z-index: var(--idxNavigationBar);
+}
+
+.back-button:hover
+{
+	background-position: left bottom;
+	border: 2px solid var(--clrBase);
+	color: var(--clrWhite);
+}
+
+@keyframes flameSection
+{
+	0%
+	{
+		box-shadow: 0 0 1000px var(--clrBase);
+	}
+
+	50%
+	{
+		box-shadow: 0 0 1000000px var(--clrBrown);
+	}
+
+	100%
+	{
+		box-shadow: 0 0 1000px var(--clrBase);
+	}
+}
+
+@keyframes glowTitle
+{
+	0%
+	{
+		box-shadow: 0 0 10px var(--clrBase);
+	}
+	
+	100%
+	{
+		box-shadow: 0 0 50px var(--clrBase);
+	}
+}
+
+@media (max-width: 952px)
+{
+	.back-button
+	{
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 750px)
+{
+	.back-button
+	{
+		font-size: .8em;
+	}
+}

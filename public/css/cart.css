@@ -1,0 +1,540 @@
+.cart
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	display: flex;
+	color: var(--clrBlack);
+	cursor: default;
+	min-height: 100vh;
+	justify-content: center;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.cart h2
+{
+	font-size: 2em;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.cart p
+{
+	font-weight: 600;
+}
+
+.cart select
+{
+	background-color: rgba(var(--clrGreyRGB), .3);
+	width: 120px;
+}
+
+.cart .contents
+{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: 140px 100px 140px 100px;
+	text-align: center;
+	width: 100%;
+}
+
+.cart .contents .col
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.cart .contents .col .list
+{
+	height: auto;
+}
+
+.cart .contents .card
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	border-radius: 10px;
+	box-shadow: 0 2px 0 rgba(var(--clrBlackRGB), .3);
+	cursor: pointer;
+	display: flex;
+	height: 200px;
+	justify-content: space-between;
+	margin: 5px 0 40px 0;
+	padding: 40px;
+	text-align: left;
+	transition: all .3s;
+	width: 900px;
+}
+
+.cart .contents .card:hover
+{
+	background-color: var(--clrGrey2);
+	box-shadow: 0 4px 6px var(--clrBlack);
+}
+
+.cart .contents .card .group
+{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.cart .contents .card .image
+{
+	align-items: center;
+	border-radius: 20px;
+	background-color: var(--clrWhite);
+	box-shadow: 0 0 9px var(--clrBlack);
+	display: flex;
+	height: 160px;
+	justify-content: center;
+	margin-right: 20px;
+	overflow: hidden;
+	padding: 20px;
+	width: 150px;
+}
+
+.cart .contents .card:hover .image
+{
+	box-shadow: 0 0 20px var(--clrBlack);
+}
+
+.cart .contents .card .image img
+{
+	width: 100%;
+}
+
+.cart .contents .card .info-product p:first-child
+{
+	font-size: 1.2em;
+}
+
+.cart .contents .card .action
+{
+	margin-top: 30px;
+}
+
+.cart .contents .card .action button
+{
+	background-color: var(--clrBase);
+	border: none;
+	border-radius: 10px;
+	color: var(--clrWhite);
+	cursor: pointer;
+	font-size: 1.7em;
+	font-weight: 900;
+	padding: 0 12px;
+	text-align: center;
+	transition: all .3s;
+}
+
+.cart .contents .card .action button.quantity-decrease-cart
+{
+	background-color: var(--clrDarkWhite);
+}
+
+.cart .contents .card .action button:hover, .cart .contents .card .action button.quantity-decrease-cart:hover
+{
+	background-color: var(--clrBlack);
+}
+
+.cart .contents .card .action input
+{
+	border: none;
+	font-size: 1.2em;
+	outline: none;
+	text-align: center;
+	transition: all .3s;
+	width: 60px;
+}
+
+.cart .contents .card .action input:hover, .cart .contents .card .action input:focus
+{
+	border: 1px solid var(--clrBlack);
+}
+
+.cart .contents .card .action input::-webkit-inner-spin-button, .cart .contents .card .action input::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+}
+
+.cart .contents .card:hover .action input
+{
+	background-color: var(--clrGrey2);
+}
+
+.cart .contents .card .action .delete
+{
+	font-size: 1.7em;
+	margin-top: 25px;
+	text-align: end;
+}
+
+.cart .contents .card .action .delete i
+{
+	transition: all .3s;
+}
+
+.cart .contents .card .action .delete i:hover
+{
+	color: var(--clrBase);
+	transform: scale(1.2);
+}
+
+.cart .contents .card.info
+{
+	align-items: self-start;
+	background-color: var(--clrGrey2);
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(var(--clrBlackRGB), .3);
+	cursor: default;
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	justify-content: flex-start;
+	padding: 25px;
+	text-align: left;
+	width: 350px;
+}
+
+.cart .contents .card.info .subinfo
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.cart .contents .card.info .subinfo.sum
+{
+	border-top: 2px solid rgba(var(--clrBlackRGB), .4);
+	margin-top: 5px;
+}
+
+.cart .contents .card.info .pay-button
+{
+	background: linear-gradient(to right, var(--clrBase) 50%, var(--clrBlack) 50%);
+	background-position: left bottom;
+	background-size: 200% 100%;
+	border-radius: 5px;
+	color: var(--clrWhite);
+	cursor: pointer;
+	display: flex;
+	font-weight: 600;
+	justify-content: center;
+	margin-top: 25px;
+	padding: 10px;
+	transition: background-position .5s;
+	width: 100%;
+}
+
+.cart .contents .card.info .pay-button:hover
+{
+	background-position: right bottom;
+}
+
+@media (max-width: 1480px)
+{
+	.cart select
+	{
+		width: 90px;
+	}
+
+	.cart .contents
+	{
+		margin: 130px 90px 130px 90px;
+	}
+
+	.cart .contents .card
+	{
+		width: 830px;
+	}
+
+	.cart .contents .card.info
+	{
+		font-size: .9em;
+		width: 300px;
+	}
+}
+
+@media (max-width: 1320px)
+{
+	.cart select
+	{
+		width: 80px;
+	}
+
+	.cart .contents
+	{
+		margin: 120px 80px 120px 80px;
+	}
+
+	.cart .contents .card
+	{
+		width: 750px;
+	}
+
+	.cart .contents .card.info
+	{
+		font-size: .8em;
+		width: 250px;
+	}
+
+	.cart .contents .card.info .pay-button
+	{
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 1200px)
+{
+	.cart h2
+	{
+		font-size: 1.7em;
+		margin-bottom: 15px;
+	}
+
+	.cart select
+	{
+		font-size: .8em;
+		width: 70px;
+	}
+
+	.cart .contents
+	{
+		margin: 100px 60px 100px 60px;
+	}
+
+	.cart .contents .col
+	{
+		margin-top: 15px;
+	}
+
+	.cart .contents .card
+	{
+		border-radius: 5px;
+		height: 150px;
+		width: 600px;
+	}
+
+	.cart .contents .card .image
+	{
+		border-radius: 15px;
+		height: 100px;
+		margin-right: 20px;
+		padding: 15px;
+		width: 110px;
+	}
+
+	.cart .contents .card .info-product p:last-child
+	{
+		font-size: .7em;
+	}
+
+	.cart .contents .card .action button
+	{
+		border-radius: 5px;
+		font-size: 1.2em;
+		font-weight: 800;
+		padding: 0 9px;
+	}
+
+	.cart .contents .card .action input
+	{
+		font-size: 1em;
+	}
+
+	.cart .contents .card .action .delete
+	{
+		font-size: 1.5em;
+		margin-top: 20px;
+	}
+
+	.cart .contents .card.info
+	{
+		font-size: .7em;
+		width: 220px;
+	}
+}
+
+@media (max-width: 1010px)
+{
+	.cart h2
+	{
+		font-size: 1.6em;
+	}
+
+	.cart select
+	{
+		width: 50px;
+	}
+
+	.cart .contents
+	{
+		margin: 90px 50px 90px 50px;
+	}
+
+	.cart .contents .col
+	{
+		margin-top: 20px;
+	}
+
+	.cart .contents .card
+	{
+		height: 100px;
+		margin-bottom: 30px;
+		width: 500px;
+	}
+
+	.cart .contents .card .image
+	{
+		border-radius: 10px;
+		height: 80px;
+		margin-right: 20px;
+		width: 85px;
+	}
+
+	.cart .contents .card .info-product p:first-child
+	{
+		font-size: 1em;
+	}
+
+	.cart .contents .card .info-product p:last-child
+	{
+		font-size: .7em;
+	}
+
+	.cart .contents .card .action button
+	{
+		font-size: 1em;
+		font-weight: 700;
+		padding: 0 9px;
+	}
+
+	.cart .contents .card .action input
+	{
+		font-size: 1em;
+		width: 50px;
+	}
+
+	.cart .contents .card .action .delete
+	{
+		font-size: 1.1em;
+		margin-top: 12px;
+	}
+
+	.cart .contents .card.info
+	{
+		font-size: .6em;
+		width: 200px;
+	}
+}
+
+@media (max-width: 820px)
+{
+	.cart select
+	{
+		font-size: 1em;
+	}
+
+	.cart .contents .col
+	{
+		flex-direction: column;
+		margin-top: 20px;
+		width: auto;
+	}
+
+	.cart .contents .card
+	{
+		height: 100px;
+		width: 90vw;
+	}
+
+	.cart .contents .card .image
+	{
+		border-radius: 10px;
+		height: 80px;
+		margin-right: 20px;
+		padding: 10px;
+		width: 85px;
+	}
+
+	.cart .contents .card .info-product p:first-child
+	{
+		font-size: .8em;
+	}
+
+	.cart .contents .card .info-product p:last-child
+	{
+		font-size: .7em;
+	}
+
+	.cart .contents .card .action button
+	{
+		font-size: 1em;
+		font-weight: 700;
+		padding: 0 9px;
+	}
+
+	.cart .contents .card .action input
+	{
+		font-size: 1em;
+		width: 50px;
+	}
+
+	.cart .contents .card .action .delete
+	{
+		font-size: 1.1em;
+		margin-top: 12px;
+	}
+
+	.cart .contents .card.info
+	{
+		font-size: .7em;
+		height: auto;
+		width: 30vw;
+	}
+
+	.cart .contents .card.info .pay-button
+	{
+		font-size: 1em;
+	}
+}
+
+@media (max-width: 600px)
+{
+	.cart .contents .card
+	{
+		padding: 15px;
+	}
+
+	.cart .contents .card .image
+	{
+		border-radius: 10px;
+		height: 80px;
+		margin-right: 20px;
+		padding: 10px;
+	}
+
+	.cart .contents .card .action input
+	{
+		font-size: .8em;
+		width: 30px;
+	}
+
+	.cart .contents .card .action .delete
+	{
+		font-size: 1.1em;
+		margin-top: 12px;
+	}
+
+	.cart .contents .card.info
+	{
+		font-size: .6em;
+		width: 200px;
+	}
+}

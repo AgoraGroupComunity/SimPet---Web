@@ -1,0 +1,146 @@
+header
+{
+	background-color: var(--clrBase);
+	border-bottom: 1px solid var(--clrBlack);
+	display: block;
+	position: fixed;
+	width: 100%;
+	z-index: var(--idxNavigationBar);
+}
+
+.navigation-bar
+{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 150px;
+	margin-right: 150px;
+	padding: 20px 0;
+}
+
+.navigation-bar .logo
+{
+	width: 100px;
+}
+
+.navigation-bar .buttons
+{
+	column-gap: 2em;
+	display: flex;
+}
+
+.navigation-bar .buttons a
+{
+	border-bottom: 3px solid transparent;
+	color: var(--clrWhite);
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: all .3s;
+}
+
+.navigation-bar .buttons a:hover, .navigation-bar .buttons a.active, .navigation-bar .bx-menu.active
+{
+	border-bottom: 3px solid var(--clrBlack);
+	color: var(--clrBlack);
+}
+
+.navigation-bar .buttons .title-addon
+{
+	display: none;
+}
+
+.navigation-bar .bx-menu
+{
+	border-bottom: 3px solid transparent;
+	color: var(--clrWhite);
+	cursor: pointer;
+	display: none;
+	font-size: 1.5em;
+	margin-right: 50px;
+	right: 0;
+	transition: all .3s;
+}
+
+@media (max-width: 952px)
+{
+	.navigation-bar
+	{
+		justify-content: center;
+		padding: 20px 0;
+	}
+	
+	.navigation-bar .logo
+	{
+		width: 100px;
+	}
+
+	.navigation-bar .buttons
+	{
+		background-color: var(--clrBase);
+		border-top: 1px solid var(--clrBlack);
+		clip-path: circle(0% at 100% 0%);
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		position: absolute;
+		right: 0;
+		row-gap: 1.6em;
+		text-align: center;
+		transition: all .6s;
+		top: 100%;
+	}
+
+	.navigation-bar .buttons.active
+	{
+		clip-path: circle(144% at 100% 0%);
+	}
+
+	.navigation-bar .buttons a
+	{
+		display: block;
+		font-size: 1em;
+	}
+
+	.navigation-bar .buttons i
+	{
+		display: none;
+	}
+
+	.navigation-bar .buttons .title-addon
+	{
+		display: initial;
+	}
+
+	.navigation-bar .bx-menu
+	{
+		display: initial;
+		position: absolute;
+	}
+}
+
+@media (max-height: 500px)
+{
+
+	.navigation-bar
+	{
+		padding: 10px 0;
+	}
+	
+	.navigation-bar .logo
+	{
+		width: 70px;
+	}
+
+	.navigation-bar .buttons
+	{
+		padding: 15px;
+		row-gap: .7em;
+	}
+
+	.navigation-bar .buttons a
+	{
+		font-size: .8em;
+	}
+}

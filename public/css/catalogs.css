@@ -1,0 +1,327 @@
+.catalogs
+{
+	align-items: center;
+	background-color: var(--clrWhite);
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.catalogs .contents
+{
+	background-color: var(--clrWhite);
+	display: block;
+	justify-content: center;
+	margin: 180px 200px 180px 200px;
+	text-align: center;
+	width: 100%;
+}
+
+.catalogs .contents button
+{
+	display: none;
+}
+
+.catalogs .contents button.active
+{
+	background: linear-gradient(to right, var(--clrBlack) 50%, var(--clrBase) 50%);
+	background-position: left bottom;
+	background-size: 200% 100%;
+	border: 1px solid var(--clrBlack);
+	border-radius: 6px;
+	color: var(--clrWhite);
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	padding: 10px 22px;
+	transition: background-position .5s;
+}
+
+.catalogs .contents button.active:hover
+{
+	background-position: right bottom;
+	border: 1px solid var(--clrWhite);
+}
+
+.catalogs .contents .row
+{
+	display: none;
+}
+
+.catalogs .contents .row.active
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 70px;
+	width: 100%;
+}
+
+.catalogs .contents .col
+{
+	display: flex;
+	justify-content: center;
+}
+
+.catalogs .contents .card
+{
+	align-items: center;
+	background-color: var(--clrGrey2);
+	border-radius: 10px;
+	box-shadow: 0 4px 6px var(--clrBlack);
+	color: var(--clrBlack);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 402px;
+	justify-content: space-between;
+	text-align: left;
+	width: 307px;
+}
+
+.catalogs .contents .card:hover
+{
+	box-shadow: 0 0 50px var(--clrBase2);
+}
+
+.catalogs .contents .card .icon
+{
+	background-color: var(--clrWhite);
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(var(--clrBlackRGB), .2);
+	display: flex;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.catalogs .contents .card .icon img
+{
+	height: 200px;
+}
+
+.catalogs .contents .card .descriptions
+{
+	align-self: self-start;
+	background-color: var(--clrWhite);
+	border-radius: 0 0 10px 10px;
+	height: 30%;
+	padding: 20px;
+	width: 100%;
+}
+
+.catalogs .contents .no-data
+{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.catalogs .contents .no-data img
+{
+	width: 25vw;
+}
+
+.catalogs .contents .no-data h2
+{
+	font-weight: 500;
+	margin-top: 10px;
+	text-align: center;
+}
+
+@media (max-width: 1370px)
+{
+	.catalogs .contents
+	{
+		margin: 150px 120px 150px 120px;
+	}
+
+	.catalogs .contents .no-data h2
+	{
+		font-size: 1.3em;
+	}
+}
+
+@media (max-width: 1262px)
+{
+	.catalogs h1
+	{
+		font-size: 1em;
+		font-weight: 700;
+	}
+	.catalogs h4
+	{
+		font-size: .8em;
+		font-weight: 600;
+	}
+
+	.catalogs .contents .row.active
+	{
+		margin-bottom: 60px;
+	}
+	
+	.catalogs .contents .card
+	{
+		height: 307px;
+		width: 212px;
+	}
+
+	.catalogs .contents .card .icon
+	{
+		margin-top: 20px;
+		padding: 15px;
+	}
+
+	.catalogs .contents .card .icon img
+	{
+		height: 150px;
+	}
+
+	.catalogs .contents .no-data h2
+	{
+		font-size: 1.1em;
+	}
+}
+
+@media (max-width: 952px)
+{
+	.catalogs h1
+	{
+		font-size: .9em;
+	}
+	.catalogs h4
+	{
+		font-size: .7em;
+	}
+
+	.catalogs .contents
+	{
+		margin: 150px 40px 150px 40px;
+	}
+
+	.catalogs .contents .row.active
+	{
+		margin-bottom: 50px;
+	}
+	
+	.catalogs .contents .card
+	{
+		height: 270px;
+		width: 192px;
+	}
+
+	.catalogs .contents .card .icon
+	{
+		margin-top: 15px;
+	}
+
+	.catalogs .contents .card .icon img
+	{
+		height: 130px;
+	}
+
+	.catalogs .contents .no-data h2
+	{
+		font-size: 1em;
+	}
+}
+
+@media (max-width: 700px)
+{
+	.catalogs h1
+	{
+		font-size: .7em;
+	}
+	.catalogs h4
+	{
+		font-size: .6em;
+	}
+
+	.catalogs .contents
+	{
+		margin: 100px 40px 100px 40px;
+	}
+	
+	.catalogs .contents .row.active
+	{
+		margin-bottom: 30px;
+	}
+	
+	.catalogs .contents .card
+	{
+		border-radius: 5px;
+		height: 200px;
+		width: 150px;
+	}
+
+	.catalogs .contents .card .icon
+	{
+		margin-top: 7px;
+		padding: 10px;
+	}
+
+	.catalogs .contents .card .icon img
+	{
+		height: 100px;
+	}
+
+	.catalogs .contents .card .descriptions h1
+	{
+		margin-top: -7px;
+	}
+
+	.catalogs .contents .no-data h2
+	{
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 570px)
+{
+	.catalogs h1
+	{
+		font-size: .5em;
+	}
+	.catalogs h4
+	{
+		font-size: .5em;
+	}
+
+	.catalogs .contents
+	{
+		margin: 90px 20px 90px 20px;
+	}
+
+	.catalogs .contents .row.active
+	{
+		margin-bottom: 30px;
+	}
+	
+	.catalogs .contents .card
+	{
+		height: 130px;
+		width: 100px;
+	}
+
+	.catalogs .contents .card .icon
+	{
+		border-radius: 5px;
+		margin-top: 6px;
+		padding: 7px;
+	}
+
+	.catalogs .contents .card .icon img
+	{
+		height: 60px;
+	}
+
+	.catalogs .contents .card .descriptions h1
+	{
+		margin-top: -15px;
+	}
+
+	.catalogs .contents .no-data h2
+	{
+		font-size: .6em;
+	}
+}

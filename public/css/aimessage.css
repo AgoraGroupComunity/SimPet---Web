@@ -1,0 +1,124 @@
+.aimessage
+{
+	cursor: default;
+	color: var(--clrBlack);
+	margin: auto;
+	width: 95%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+.aimessage .contents
+{
+	border-radius: 10px;
+	box-shadow: 0 2px 4px var(--clrBlack);
+	background: var(--clrGrey2);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 100px 70px 100px 70px;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+}
+
+.aimessage .contents .header
+{
+	width: 100%;
+	color: var(--clrWhite);
+	border-radius: 10px;
+	background-color: var(--clrBase);
+	font-weight: 600;
+	font-size: 2rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px 0;
+}
+
+.aimessage .contents .aimessage-container
+{
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: auto;
+}
+
+.aimessage .contents .aimessage-container .aimessage-system
+{
+	width: 90%;
+	border: 1px solid var(--clrBlack);
+	border-radius: 10px;
+	padding: 20px 10px;
+	background-color: var(--clrWhite);
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.aimessage .contents .aimessage-container .aimessage-ai
+{
+	width: 50%;
+	border-radius: 10px;
+	padding: 20px 20px;
+	color: var(--clrWhite);
+	background-color: var(--clrGrey);
+	align-self: self-start;
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.aimessage .contents .aimessage-container .aimessage-user
+{
+	width: 50%;
+	border-radius: 10px;
+	padding: 20px 20px;
+	color: var(--clrWhite);
+	background-color: var(--clrGreen);
+	align-self: self-end;
+	text-align: left;
+	margin-right: 5px;
+	margin-bottom: 15px;
+}
+
+.aimessage .contents .input-area
+{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.aimessage .contents .input-area input
+{
+	width: 85%;
+	margin-right: 5px;
+	padding: 5px;
+	border: 1px solid rgba(var(--clrDarkGreyRGB), .5);
+	border-radius: 5px;
+}
+
+.aimessage .contents .input-area button
+{
+	width: 15%;
+	cursor: pointer;
+	color: var(--clrWhite);
+	font-size: 1.2rem;
+	font-weight: 700;
+	border: 0;
+	border-radius: 5px;
+	background-color: var(--clrBase2);
+	transition: all .3s;
+}
+
+.aimessage .contents .input-area button:hover
+{
+	background-color: var(--clrGreen);
+}
