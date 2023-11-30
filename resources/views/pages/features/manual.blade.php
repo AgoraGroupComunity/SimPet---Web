@@ -155,12 +155,12 @@
 								if ($(".vitamine").val() == element.vitamin.jenis_vitamin)
 									$(".vitamine-result").html(element.vitamin.jenis_vitamin + " cocok untuk hewan ternak Anda");
 								else
-									$(".vitamine-result").html("Ganti jenis vaksin ternak Anda dengan " + element.vitamin.jenis_vitamin);
+									$(".vitamine-result").html("Ganti jenis vitamin ternak Anda dengan " + element.vitamin.jenis_vitamin);
 
 								if ($(".vaccine").val() == element.vaksin.jenis_vaksin)
 									$(".vaccine-result").html(element.vaksin.jenis_vaksin + " cocok untuk hewan ternak Anda");
 								else
-									$(".vaccine-result").html("Ganti jenis vitamin ternak Anda dengan " + element.vaksin.jenis_vaksin);
+									$(".vaccine-result").html("Ganti jenis vaksin ternak Anda dengan " + element.vaksin.jenis_vaksin);
 								
 								if ($(".length").val() == element.kandang.minPanjang)
 									$(".length-result").html("Panjang " + element.kandang.minPanjang + "m sudah sesuai");

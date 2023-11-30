@@ -12,13 +12,15 @@
 
 	<section class="aimessage">
 		<div class="contents">
-			<div class="header">Tanya Ternak</div>
-			<div class="aimessage-container">
-				<div class="aimessage-system">Halo, selamat datang di Tanya Ternak! Ayo tanya apapun seputar peternakan dan nantinya AI akan membantu menyelesaikan masalah Anda!</div>
-			</div>
-			<div class="input-area">
-				<input class="input-message" type="text" placeholder="Tulis pesan di sini">
-				<button class="button-send-message" title="Kririm pesan Anda">Kirim</button>
+			<div class="card">
+				<div class="header">Tanya Ternak</div>
+				<div class="aimessage-container">
+					<div class="aimessage-system">Halo, selamat datang di Tanya Ternak! Ayo tanya apapun seputar peternakan dan nantinya AI akan membantu menyelesaikan masalah Anda!</div>
+				</div>
+				<div class="input-area">
+					<input class="input-message" type="text" placeholder="Tulis pesan di sini">
+					<button class="button-send-message" title="Kririm pesan Anda">Kirim</button>
+				</div>
 			</div>
 		</div>
 	</section>
