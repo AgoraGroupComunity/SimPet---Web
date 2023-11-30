@@ -36,6 +36,6 @@
 		</div>
 	</div>
 	<div class="version">
-		<p>Copyright &copy; 2023 AgoraGroup. All Rights Reserved<br>Version 1.5.18.7</p>
+		<p>Copyright &copy; 2023 AgoraGroup. All Rights Reserved<br>Version 1.7.20.8</p>
 	</div>
 </footer>
