@@ -142,7 +142,7 @@
 								$(".vitamine").html(element.vitamin.jenis_vitamin);
 								$(".vaccine").html(element.vaksin.jenis_vaksin);
 								$(".clean-water").html(animalAmounts + parseInt(element.air_bersih) + "Liter/hari");
-								$(".human-resource").html(Math.ceil(animalAmounts * parseFloat(element.SDM)));
+								$(".human-resource").html(Math.ceil(animalAmounts * parseFloat(element.SDM)) + " orang");
 								$(".recommendation.result .cost p:last-child").html("Rp" + totalCost.toLocaleString("id-ID"));
 							});
 
