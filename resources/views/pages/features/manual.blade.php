@@ -24,15 +24,15 @@
 			<div class="input-area">
 				<div class="col">
 					<p>Jenis Pakan</p>
-					<input class="feed" type="text" title="Masukkan jumlah hewan ternak yang Anda inginkan" placeholder="-">
+					<input class="feed" type="text" title="Masukkan jenis pakan ternak yang Anda inginkan" placeholder="-">
 				</div>
 				<div class="col">
 					<p>Vitamin</p>
-					<input class="vitamine" type="text" title="Masukkan durasi ternak yang Anda inginkan" placeholder="-">
+					<input class="vitamine" type="text" title="Masukkan vitamin untuk ternak yang Anda inginkan" placeholder="-">
 				</div>
 				<div class="col">
 					<p>Vaksin</p>
-					<input class="vaccine" type="text" title="Masukkan durasi ternak yang Anda inginkan" placeholder="-">
+					<input class="vaccine" type="text" title="Masukkan vaksin untuk ternak yang Anda inginkan" placeholder="-">
 				</div>
 			</div>
 			<div class="input-area">
@@ -46,15 +46,15 @@
 				</div>
 				<div class="col">
 					<p>Panjang Kandang (m)</p>
-					<input class="length" type="number" title="Masukkan durasi ternak yang Anda inginkan" placeholder="0">
+					<input class="length" type="number" title="Masukkan panjang kandang ternak yang Anda inginkan" placeholder="0">
 				</div>
 				<div class="col">
 					<p>Lebar Kandang (m)</p>
-					<input class="width" type="number" title="Masukkan durasi ternak yang Anda inginkan" placeholder="0">
+					<input class="width" type="number" title="Masukkan lebar kandang ternak yang Anda inginkan" placeholder="0">
 				</div>
 				<div class="col">
 					<p>Debit Air Bersih (Liter/hari)</p>
-					<input class="clean-water" type="number" title="Masukkan durasi ternak yang Anda inginkan" placeholder="0">
+					<input class="clean-water" type="number" title="Masukkan debit air bersih yang Anda inginkan" placeholder="0">
 				</div>
 			</div>
 			<button class="manual-start-calculation" title="Mulai cek rancangan peternakan Anda sekarang">Cek Peternakan</button>
