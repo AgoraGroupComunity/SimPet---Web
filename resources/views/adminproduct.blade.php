@@ -159,6 +159,7 @@
 
           res.forEach(element => {
             
+            totalProduct+=1;
             no+=1;
             view += "<tr>"+
                 "<td>"+no+"</td>"+
