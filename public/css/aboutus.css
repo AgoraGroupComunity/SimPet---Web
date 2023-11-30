@@ -1,98 +1,337 @@
-#home {
-	width: 100%;
-	padding: 3rem;
-	display: flex;
-	flex-wrap: wrap;
+.aboutus
+{
 	align-items: center;
-	justify-content: space-around;
-}
-
-.home-left {
-	margin-top: 100px;
-	height: 300px;
-	position: relative;
-}
-
-.home-left img {
-	height: 100%;
-	border-radius: 10px;
-}
-
-.home-right {
-	margin-top: 100px;
-	width: 50%;
-}
-
-.home-heading {
-	font-size: 60px;
-	margin-bottom: 10px;
-}
-
-.home-para {
-	margin-bottom: 20px;
-}
-
-.btn {
-	text-decoration: none;
-	color: black;
-	font-weight: bold;
-	position: relative;
-	width: 0;
-}
-
-#our-Team {
-	width: 80%;
-	margin: 4rem auto 4rem;
-}
-
-#our-Team h2 {
-	text-align: center;
-	margin: 1rem auto 4rem;
-	position: relative;
-}
-
-#our-Team h2::after {
-	content: '';
-	height: 4px;
-	margin: 0 auto;
-	text-align: center;
-	width: 15%;
-	background-color: #7E6F60;
-	position: absolute;
-	left: 50%;
-	bottom: -10px;
-	border-radius: 5px;
-	transform: translate(-50%);
-}
-
-.teamContainer {
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.team-item {
+	background-color: var(--clrWhite);
+	color: var(--clrBlack);
+	cursor: default;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.aboutus h5
+{
+	font-size: 1em;
+	margin-bottom: 5px;
+}
+
+.aboutus h1
+{
+	font-size: 4em;
+	margin-bottom: 5px;
+}
+
+.aboutus p
+{
+	line-height: 1.5em;
+}
+
+.aboutus h2
+{
+	border-bottom: 4px solid var(--clrBase);
+	font-size: 2em;
+	margin-bottom: 60px;
+}
+
+.aboutus span
+{
+	color: var(--clrBase);
+	font-weight: 700;
+}
+
+.aboutus .contents
+{
+	display: block;
+	height: 100%;
+	margin: 100px 140px;
+	text-align: justify;
+	width: 80%;
+}
+
+.aboutus .contents .agora
+{
 	align-items: center;
-	margin: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.team-item h5 {
-	margin-top: 1rem;
-	font-size: 1.1rem;
+.aboutus .contents .agora .icon
+{
+	margin-right: 150px;
+	padding: 20px;
 }
 
-.team-item span {
-	margin-top: .4rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	color:#7E6F60;
+.aboutus .contents .agora .icon img
+{
+	background-color: var(--clrBlack);
+	border-radius: 50%;
+	width: 300px;
 }
 
-.team-item img {
-	width: 80px;
+.aboutus .contents .members
+{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+.aboutus .contents .members .container
+{
+	display: flex;
+	flex-direction: row;
+	gap: 90px;
+}
+
+.aboutus .contents .members .container .item
+{
+	width: 200px;
+}
+
+.aboutus .contents .members .container .item img
+{
+	padding: 10px;
+	height: 120px;
+}
+
+@media (max-width: 1441px)
+{
+	.aboutus h5
+	{
+		font-size: .9em;
+		margin-bottom: 3px;
+	}
+
+	.aboutus h1
+	{
+		font-size: 3em;
+		margin-bottom: 3px;
+	}
+
+	.aboutus h2
+	{
+		border-bottom: 3.5px solid var(--clrBase);
+		font-size: 1.6em;
+		margin-bottom: 50px;
+	}
+
+	.aboutus span
+	{
+		font-size: .8em;
+		font-weight: 600;
+	}
+
+	.aboutus .contents
+	{
+		margin: 90px 100px;
+		width: 90%;
+	}
+
+	.aboutus .contents .agora .icon
+	{
+		margin-right: 140px;
+		padding: 10px;
+	}
+
+	.aboutus .contents .agora .icon img
+	{
+		width: 250px;
+	}
+
+	.aboutus .contents .members
+	{
+		margin-top: 45px;
+	}
+
+	.aboutus .contents .members .container
+	{
+		gap: 90px;
+	}
+
+	.aboutus .contents .members .container .item
+	{
+		width: 150px;
+	}
+
+	.aboutus .contents .members .container .item img
+	{
+		height: 120px;
+	}
+
+	.aboutus .contents .members .container .item h5
+	{
+		font-size: .8em;
+	}
+}
+
+@media (max-width: 1025px)
+{
+	.aboutus h1
+	{
+		font-size: 2.5em;
+	}
+
+	.aboutus p
+	{
+		font-size: .8em;
+	}
+
+	.aboutus h2
+	{
+		font-size: 1.6em;
+		margin-bottom: 50px;
+	}
+
+	.aboutus span
+	{
+		font-size: .8em;
+	}
+
+	.aboutus .contents .agora .icon
+	{
+		margin-right: 130px;
+	}
+
+	.aboutus .contents .agora .icon img
+	{
+		width: 200px;
+	}
+
+	.aboutus .contents .members
+	{
+		margin-top: 40px;
+	}
+
+	.aboutus .contents .members .container
+	{
+		gap: 40px;
+	}
+
+	.aboutus .contents .members .container .item
+	{
+		width: 150px;
+	}
+
+	.aboutus .contents .members .container .item img
+	{
+		height: 90px;
+	}
+
+	.aboutus .contents .members .container .item h5
+	{
+		font-size: .7em;
+	}
+}
+
+@media (max-width: 769px)
+{
+	.aboutus h1
+	{
+		font-size: 2.2em;
+	}
+
+	.aboutus p
+	{
+		font-size: .7em;
+	}
+
+	.aboutus h2
+	{
+		border-bottom: 3px solid var(--clrBase);
+		font-size: 1.4em;
+		margin-bottom: 40px;
+	}
+
+	.aboutus span
+	{
+		font-size: .7em;
+	}
+
+	.aboutus .contents .agora .icon
+	{
+		margin-right: 100px;
+	}
+
+	.aboutus .contents .agora .icon img
+	{
+		width: 190px;
+	}
+
+	.aboutus .contents .members
+	{
+		margin-top: 40px;
+	}
+
+	.aboutus .contents .members .container
+	{
+		gap: 20px;
+	}
+
+	.aboutus .contents .members .container .item
+	{
+		width: 130px;
+	}
+
+	.aboutus .contents .members .container .item img
+	{
+		height: 90px;
+	}
+
+	.aboutus .contents .members .container .item h5
+	{
+		font-size: .65em;
+	}
+}
+
+@media (max-width: 426px)
+{
+	.aboutus h1
+	{
+		font-size: 2em;
+	}
+
+	.aboutus p
+	{
+		font-size: .6em;
+	}
+
+	.aboutus h2
+	{
+		font-size: 1.4em;
+		margin-bottom: 40px;
+	}
+
+	.aboutus .contents
+	{
+		margin: 80px 100px;
+	}
+
+	.aboutus .contents .agora .icon
+	{
+		margin-right: 40px;
+	}
+
+	.aboutus .contents .agora .icon img
+	{
+		width: 80px;
+	}
+
+	.aboutus .contents .members
+	{
+		margin-top: 35px;
+	}
+
+	.aboutus .contents .members .container
+	{
+		flex-wrap: wrap;
+		gap: 15px;
+		justify-content: center;
+	}
 }
