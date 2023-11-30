@@ -12,7 +12,7 @@
 
 	<section id="home">
 		<div class="home-left">
-			<img src="graphics/icons/icon_logo.png" alt="">
+			<img src="/graphics/icons/icon_logo_agora.png" alt="icon_logo_agora">
 		</div>
 		<div class="home-right">
 			<a href="" class="btn"> Siapa kami?</a>
