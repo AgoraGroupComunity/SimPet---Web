@@ -23,6 +23,7 @@
 		<link rel="stylesheet" href="/css/manual.css">
 		<link rel="stylesheet" href="/css/monitor.css">
 		<link rel="stylesheet" href="/css/navigation-bar.css">
+		<link rel="stylesheet" href="/css/paneladmin.css">
 		<link rel="stylesheet" href="/css/payment.css">
 		<link rel="stylesheet" href="/css/profile.css">
 		<link rel="stylesheet" href="/css/recommendation.css">

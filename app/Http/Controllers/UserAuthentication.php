@@ -124,6 +124,8 @@ class UserAuthentication extends Controller
 		// Make return to the latest or specific destination page after signin or re-signin
 		if (isset($request) && !empty($request->input("pagecallback")))
 			return redirect("/" . $request->input("pagecallback"));
+		else if (Session::get("username") === "admin")
+			return redirect("/admin");
 		else
 			return redirect("/");
 	}

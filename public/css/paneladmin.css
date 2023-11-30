@@ -1,0 +1,321 @@
+.menuadmin {
+  background: rgb(226, 226, 226);
+  display: flex;
+}
+
+.menuadmin .menuAdmin {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 280px;
+  background: #fff;
+  overflow: hidden;
+  /* transition: width 1s; */
+}
+
+.menuadmin:hover .menuAdmin {
+  width: 280px;
+}
+
+.menuadmin .judulAdmin {
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.menuadmin .judulAdmin span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 30px;
+  color: #7E6F60;
+}
+
+.menuadmin a {
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+
+.menuadmin nav .fas {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.menuadmin .nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+.menuadmin a:hover {
+  background: #eee;
+}
+
+.menuadmin a:hover i {
+  color: #7E6F60;
+  transition: 0.5s;
+}
+
+.menuadmin .logout {
+  position: absolute;
+  bottom: 0;
+}
+
+.main {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.main .users {
+  display: flex;
+  width: 100%;
+}
+
+.users .card{
+  width: 15%;
+  font-weight: bold;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+.users .card p{
+  text-align: end;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.users .cardselesai{
+  width: 15%;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  background: #2D671E;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .cardselesai h4{
+  text-transform: uppercase;
+}
+.users .cardselesai p{
+  text-align: end;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.users .cardproses{
+  width: 15%;
+  margin: 10px;
+  font-weight: bold;
+  color: white;
+  background: #CB9B1D;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .cardproses h4{
+  text-transform: uppercase;
+}
+.users .cardproses p{
+  text-align: end;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.users .cardbatal{
+  width: 15%;
+  margin: 10px;
+  color: white;
+  background: #BB2E25;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .cardbatal h4{
+  text-transform: uppercase;
+}
+.users .cardbatal p{
+  text-align: end;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/*Attendance List serction  */
+.attendance{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-list .btn_tambahproduk{
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 6px 20px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+
+.attendance-list .btn_tambahproduk:hover{
+background: #4AD489;
+color: #fff;
+transition: 0.5rem;}
+
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #7E6F60;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+
+/* .table tbody tr:last-of-type{
+  border-bottom: 2px solid #4AD489;
+} */
+.table .edit{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFC436;
+}
+.table .edit:hover{
+  background: #FFC436;
+  color: #fff;
+  transition: 0.5rem;}
+
+  .table .hapus{
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #B31312;
+  }
+  .table .hapus:hover{
+    background: #B31312;
+    color: #fff;
+    transition: 0.5rem;}
+
+  .table .terima{
+    border-radius: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #4AD489;
+  }
+  .table .terima:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5rem;
+  }
+
+  .fotoedit{
+    display:flex ;
+    justify-content:start;
+    flex-direction:row ;
+  }
+  .previewProductImage{
+    height: 100px;
+    max-width: 200px;
+  }
+
+  #formEdit{
+    display: flex;
+    flex-direction:row ;
+    
+  }
+
+  /* Container for the form */
+.form-container {
+    width: 100%; 
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+/* Individual form fields */
+.mb-3 {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Label styles */
+.labelProduct {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.descArea{
+  height: 250px;
+}
+
+/* Input and textarea styles */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button style (for your cancel button) */
+.cancelButton {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.brownColor{
+  background-color: #7E6F60;
+  color: white;
+}

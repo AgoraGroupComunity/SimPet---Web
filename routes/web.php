@@ -25,6 +25,35 @@ Route::get("/", function()
 {
 	return view("index");
 });
+// Admin
+Route::get("/admin", function()
+{
+	if (Session::get("username") !== "admin")
+		return redirect("/");
+
+	return view("adminproduct");
+});
+Route::get("/admin/editproduct", function()
+{
+	if (Session::get("username") !== "admin")
+		return redirect("/");
+
+	return view("admineditproduct");
+});
+Route::get("/admin/user", function()
+{
+	if (Session::get("username") !== "admin")
+		return redirect("/");
+
+	return view("adminuser");
+});
+Route::get("/admin/pesanan", function()
+{
+	if (Session::get("username") !== "admin")
+		return redirect("/");
+
+	return view("adminpesanan");
+});
 
 // Others
 Route::get("/login", function()
