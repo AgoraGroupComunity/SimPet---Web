@@ -39,7 +39,7 @@
         <section class="attendance" id="mainTable">
           <div class="attendance-list">
             <h1>Daftar Produk</h1>
-            <button class="btn_tambahproduk">tambah</button>
+            <button class="btn_tambahproduk" id="createProduct">tambah</button>
             <table class="table" id="tableProducts">
               <thead>
                 <tr>
@@ -67,7 +67,7 @@
         </section>
 
         <div class="container" id="modalEdit">
-          <h1>Edit Produk</h1>
+          <h1 id="titleAction">Produk</h1>
           <form action="" id="formEdit">
 
             <div class="viewImage">
@@ -108,31 +108,27 @@
                 </div>
               </div>
             </div>
+     
+            <div class="form-container">
+              <input type="text" class="form-control" id="idProduct" placeholder="Id produk" value="" readonly>
               
-
-            
-
-              <div class="form-container">
-                <input type="hidden" class="form-control" id="idProduct" placeholder="Id produk" value="" readonly>
-                
-                
-                <div class="mb-3">
-                    <label for="nameProduct" class="labelProduct">Nama</label>
-                    <input type="text" class="form-control" id="nameProduct" placeholder="Nama produk" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="priceProduct" class="labelProduct">Harga</label>
-                    <input type="number" class="form-control" id="priceProduct" placeholder="Harga Product" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="descProduct" class="labelProduct ">Deskripsi</label>
-                    <textarea class="form-control descArea" id="descProduct" placeholder="Deskripsi Produk" required></textarea>
-                </div>
-                <input type="submit" class="cancelButton brownColor" value="Simpan" form="formEdit" id="save">
-                <input type="button" class="cancelButton" value="Batal" id="cancel">
+              <div class="mb-3">
+                  <label for="nameProduct" class="labelProduct">Nama</label>
+                  <input type="text" class="form-control" id="nameProduct" placeholder="Nama produk" required>
               </div>
+              
+              <div class="mb-3">
+                  <label for="priceProduct" class="labelProduct">Harga</label>
+                  <input type="number" class="form-control" id="priceProduct" placeholder="Harga Product" required>
+              </div>
+
+              <div class="mb-3">
+                  <label for="descProduct" class="labelProduct ">Deskripsi</label>
+                  <textarea class="form-control descArea" id="descProduct" placeholder="Deskripsi Produk" required></textarea>
+              </div>
+              <input type="submit" class="cancelButton brownColor" value="Simpan" form="formEdit" id="save">
+              <input type="button" class="cancelButton" value="Batal" id="cancel">
+            </div>
 
               
           </form>
@@ -144,8 +140,9 @@
 </section>
 <script>
   $(document).ready(function(){
-    $('#modalEdit').hide();
+    
     function loadProduct(){
+      $('#modalEdit').hide();
       $.ajax({
         url: "https://us-east-1.aws.data.mongodb-api.com/app/application-0-exinc/endpoint/getProducts",
         dataType: "json",
@@ -158,9 +155,8 @@
           var totalProduct=0;
 
           res.forEach(element => {
-            
-            totalProduct+=1;
             no+=1;
+            totalProduct+=1;
             view += "<tr>"+
                 "<td>"+no+"</td>"+
                 "<td>"+element.name+"</td>"+
@@ -203,12 +199,14 @@
   });
 
   
+
+  
   $("#tableProducts").on("click", ".edit", function () {
     $('#modalEdit').show();
     $('#mainTable').hide();
     
-
-
+    $('#titleAction').html("Edit Product")
+    
     var id = $(this).data("id");
     // alert (id);
     $.ajax({
@@ -220,7 +218,7 @@
       },
       success: function (res) {
         var data= res[0];
-        console.log(data);
+        // console.log(data);
         
         $('#idProduct').val(id);
         $('#nameProduct').val(data.name);
@@ -231,24 +229,47 @@
         $("#image-preview-product3").attr("src", (data.images.image2 ? data.images.image2 : "/graphics/icons/icon_logo.png" ));
         $("#image-preview-product4").attr("src",(data.images.image3 ? data.images.image3 : "/graphics/icons/icon_logo.png" ));
         
-
       },
       error: function (err) {
         console.log(err);
       },
     });
-  
   });
+
+
+  $("#createProduct").click(function(){
+    console.log("tambah")
+    $('#titleAction').html("Tambah Produk")
+    $('#modalEdit').show();
+    $('#mainTable').hide();
+  })
+
+
 
   //update product
   $("#save").click( function () {
 
     var id= $('#idProduct').val();
+    console.log(id)
+
+    var url="";
+    var method="";
+
+    if(id!=''){
+      url="https://us-east-1.aws.data.mongodb-api.com/app/application-0-exinc/endpoint/updateProductUpsert?id="+ id,
+      method="PUT"
+    } else{
+      
+      url="https://us-east-1.aws.data.mongodb-api.com/app/application-0-exinc/endpoint/updateProductUpsert",
+      method="PUT"
+      alert(url+"->"+method+$('#nameProduct').val())
+    }
     // console.log("klik" + id);
+   
 
     $.ajax({
-      url: "https://us-east-1.aws.data.mongodb-api.com/app/application-0-exinc/endpoint/updateProductsWeb?id=" + id,
-      type: "PUT",
+      url: url,
+      type: method,
       async: false,
       data:
       {
@@ -265,12 +286,15 @@
         // console.log( $('#nameProduct').val());
         
         
+        
 
       },
       error: function (err) {
         console.log(err);
+        alert(err)
       },
     });
+    
   
   }); //end update
 		
