@@ -64,3 +64,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Footnote
+
+Project Progress Report: Individual Assignment for Computer Architecture Course
+
+As part of the individual assignment for the Computer Architecture (Arsikom) course, significant progress has been made towards completing the designated project. The following tasks have been successfully accomplished:
+
+1. Environment Setup: Git has been installed and configured on the Ubuntu system to facilitate version control and collaboration.
+2. Repository Cloning: The project repository has been cloned from GitHub using secure authentication methods to ensure compliance with updated security protocols.
+3. Code Review and Initial Modifications: The cloned repository has been reviewed, and initial modifications and enhancements have been implemented to align with the project requirements.
+4. Documentation and Reporting: Comprehensive documentation of the project progress has been maintained, detailing each step and modification made.
+
+The next steps involve thorough testing of the implemented changes, optimization of the code for better performance, and finalizing the project documentation. The project is on track for timely completion, ensuring all objectives are met as per the course requirements.
